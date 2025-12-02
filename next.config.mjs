@@ -2,7 +2,7 @@
  * @Author: sumail sumail@xyzzdev.com
  * @Date: 2024-07-02 16:10:47
  * @LastEditors: sumail sumail@xyzzdev.com
- * @LastEditTime: 2025-12-02 10:02:00
+ * @LastEditTime: 2025-12-02 10:15:16
  * @FilePath: /nextjs/travel-dairy/next.config.mjs
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -15,6 +15,7 @@ const __dirname = path.dirname(__filename);
 
 const nextConfig = {
   reactStrictMode: false,
+  output: 'export', // 关键配置：开启静态导出
 
   webpack: (config, options) => {
     console.log(process.env.NEXT_PUBLIC_APPWRITE_DATABASE, 'hahahah');
